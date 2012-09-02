@@ -765,7 +765,12 @@
   input.span2,
   textarea.span2,
   .uneditable-input.span2 {
-    width: 90px;
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   input.span1,
   textarea.span1,
@@ -931,7 +936,7 @@
     clear: both;
   }
   .nav-collapse .nav {
-    float: none;
+    float: none !important;
     margin: 0 0 10px;
   }
   .nav-collapse .nav > li {
@@ -962,6 +967,7 @@
     -webkit-border-radius: 4px;
        -moz-border-radius: 4px;
             border-radius: 4px;
+    width: 100%;
   }
   .nav-collapse .dropdown-menu li + li a {
     margin-bottom: 2px;

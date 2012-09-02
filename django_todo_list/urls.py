@@ -8,7 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'django_todo_list.views.hello', name='hello'),
     url(r'^$', 'notes.views.index', name='index'),
-    url(r'^logout/$', 'notes.views.logoutAction', name='logout'),
+    url(r'^login/$', 'notes.views.login_user', name='login'),
+    url(r'^logout/$', 'notes.views.logout_user', name='logout'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

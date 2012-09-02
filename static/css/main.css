@@ -4,9 +4,25 @@
    Author's custom styles
    ========================================================================== */
 
+.clear                     { clear: both; }
+form                       { margin: 0; }
+.nav.right                     { float: right; }
 
+.login-body{
+    margin: 0 auto;
+    width: 214px;
+}
 
+.login-body input {
+    display: block;
+    width: 200px;
+}
 
+.login-body h2                     { text-align: center; }
+.login-body.login-error input      { background-color: #FDD; }
+p.login-error                      { color: #960000; font-size: 12px; clear: both; }
+.login-body button                 { float: right; }
+h4.blocked-message                 { text-align: center; }
 
 
 
