@@ -1,0 +1,10 @@
+{% if user.is_authenticated %}
+    <p class="navbar-form pull-right" style="padding:10px;">Welcome! - <a href="{% url logout %}">Logout</a></p>
+{% else %}
+    <form method="post" action="{% url index %}" class="navbar-form pull-right">
+        {% csrf_token %}
+        <input class="span2" type="text" name="username" placeholder="Username">
+        <input class="span2" type="password" name="password" placeholder="Password">
+        <button type="submit" class="btn">Sign in</button>
+    </form>
+{% endif %}
