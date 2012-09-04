@@ -7,14 +7,14 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'django_todo_list.views.hello', name='hello'),
-    url(r'^$', 'notes.views.index', name='index'),
-    url(r'^login/$', 'notes.views.login_user', name='login'),
-    url(r'^logout/$', 'notes.views.logout_user', name='logout'),
+    url(r'^$', 'todo_list.views.index', name='index'),
+    url(r'^login/$', 'todo_list.views.login_user', name='login'),
+    url(r'^logout/$', 'todo_list.views.logout_user', name='logout'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),le
+    # url(r'^admin/', include(admin.site.urls)),
     url(r'^admin/', include(admin.site.urls))
 )

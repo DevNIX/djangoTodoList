@@ -1,2 +1,16 @@
-<div class="hero-unit">
+<div id="desktop">
+    {% for list in lists %}
+        <article class="list" data-list-id="{{ list.id }}">
+            <h1>{{ list.title }}</h1>
+            <h2>{{ list.description }}</h2>
+            {% for task in list.task_set.all %}
+                <section class="task" data-task-id="{{ task.id }}">
+                    <h1>{{ task.title }}</h1>
+                    {% if task.description %}
+                        <p>{{ task.description }}</p>
+                    {% endif %}
+                </section>
+            {% endfor %}
+        </article>
+    {% endfor %}
 </div>

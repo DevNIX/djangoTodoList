@@ -6,11 +6,18 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 
+from todo_list.models import List
+
 
 def index(request):
     context = {}
     if request.user.is_authenticated():        # If the user is already logged
         context['page'] = 'todo-list'
+
+    # Recuperamos las listas de tareas
+    lists = List.get_list_and_task(request.user.id)
+
+    context['lists'] = lists
 
     return render_to_response('base/main.html',
         context,

@@ -3,9 +3,9 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-.clear                     { clear: both; }
-form                       { margin: 0; }
+body                           { font-family: "Arial" !important; }
+.clear                         { clear: both; }
+form                           { margin: 0; }
 .nav.right                     { float: right; }
 
 .login-body{
@@ -27,6 +27,66 @@ h4.blocked-message                 { text-align: center; }
 
 
 
+/* Desktop page */
+
+    #desktop {}
+
+    /* Lists */
+        #desktop article.list {
+            background-color: #DAE4DC;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+        #desktop article.list h1 {
+            font-size: 18px;
+            line-height: 30px;
+            margin: 0;
+        }
+
+        #desktop article.list h2 {
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 18px;
+            color: #5F5F5F;
+        }
+
+    /* Tasks */
+        #desktop article.list section.task {
+            background-color: #AACCB2;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            margin: 5px 20px;
+            padding: 10px 10px 0px 10px;
+            cursor: pointer;
+
+            /* test */
+                color: rgba(0, 0, 0, 0.5);
+                max-height: 30px;
+                overflow: hidden;
+
+                -webkit-transition-property: color, max-height;
+                -webkit-transition-duration: 1s;
+        }
+
+        #desktop article.list section.task:hover {
+            color: rgba(0, 0, 0, 1);
+            max-height: 200px;
+            overflow-y:auto;
+
+            transition-property: color, max-height;
+            transition-duration: 1s;
+        }
+
+         #desktop article.list section.task h1 {
+            line-height: 20px;
+            margin: 0 0 10px 0;
+            font-weight: normal;
+            font-size: 16px;
+        }
 
 
 
