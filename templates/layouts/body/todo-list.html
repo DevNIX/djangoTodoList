@@ -5,12 +5,15 @@
             <h2>{{ list.description }}</h2>
             {% for task in list.task_set.all %}
                 <section class="task" data-task-id="{{ task.id }}">
-                    <h1>{{ task.title }}</h1>
+                    <button class="no-style-button"><h1>{{ task.title }}</h1></button>
                     {% if task.description %}
-                        <p>{{ task.description }}</p>
+                        <div class="task-moreinfo scrollable">
+                            <p>{{ task.description }}</p>
+                        </div>
                     {% endif %}
                 </section>
             {% endfor %}
         </article>
     {% endfor %}
 </div>
+<div class="clear"></div>

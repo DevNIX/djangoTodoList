@@ -13,6 +13,9 @@ def index(request):
     context = {}
     if request.user.is_authenticated():        # If the user is already logged
         context['page'] = 'todo-list'
+        context['js'] = [
+            'main.js'
+        ]
 
     # Recuperamos las listas de tareas
     lists = List.get_list_and_task(request.user.id)

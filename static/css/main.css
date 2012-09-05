@@ -8,6 +8,15 @@ body                           { font-family: "Arial" !important; }
 form                           { margin: 0; }
 .nav.right                     { float: right; }
 
+.no-style-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0px;
+    border: none;
+    background: transparent;
+}
+
 .login-body{
     margin: 0 auto;
     width: 214px;
@@ -33,7 +42,7 @@ h4.blocked-message                 { text-align: center; }
 
     /* Lists */
         #desktop article.list {
-            background-color: #DAE4DC;
+            background-color: #E6E6E6;
             -webkit-border-radius: 6px;
             -moz-border-radius: 6px;
             border-radius: 6px;
@@ -55,37 +64,54 @@ h4.blocked-message                 { text-align: center; }
 
     /* Tasks */
         #desktop article.list section.task {
-            background-color: #AACCB2;
+            box-shadow: 0px 1px 3px grey;
+            background-color: white;
             -webkit-border-radius: 6px;
             -moz-border-radius: 6px;
             border-radius: 6px;
-            margin: 5px 20px;
-            padding: 10px 10px 0px 10px;
-            cursor: pointer;
+            margin: 7px 20px;
 
             /* test */
-                color: rgba(0, 0, 0, 0.5);
+                color: black;
                 max-height: 30px;
+                height: auto;
                 overflow: hidden;
 
-                -webkit-transition-property: color, max-height;
-                -webkit-transition-duration: 1s;
+                -webkit-transition-property: max-height;
+                -webkit-transition-duration: 0.3s;
+
+            padding-bottom: 10px;
+        }
+        p:last-child { margin-bottom: 0px; }
+
+        #desktop article.list section.task-open {
+            max-height: 240px;
+            -webkit-transition-property: max-height;
+            -webkit-transition-duration: 0.3s;
         }
 
-        #desktop article.list section.task:hover {
-            color: rgba(0, 0, 0, 1);
+        #desktop article.list section.task .task-moreinfo {
+            /*display: none;*/
+            color: #5F5F5F;
+            font-size: 13px;
+            margin: 0 10px;
             max-height: 200px;
-            overflow-y:auto;
-
-            transition-property: color, max-height;
-            transition-duration: 1s;
+            outline: none;
         }
 
          #desktop article.list section.task h1 {
             line-height: 20px;
-            margin: 0 0 10px 0;
+            padding: 10px;
             font-weight: normal;
-            font-size: 16px;
+            font-size: 14px;
+            cursor: pointer;
+            -webkit-transition-property: text-shadow;
+            -webkit-transition-duration: 0.3s;
+        }
+        #desktop article.list section.task h1:hover {
+            text-shadow: 0px 1px 0px #BEBEBE;
+            -webkit-transition-property: text-shadow;
+            -webkit-transition-duration: 0.3s;
         }
 
 
